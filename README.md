@@ -4,7 +4,7 @@ SDK Name: SimpliFiCard
 
 ## Overview
 
-SimpliFiCard SDK is a powerful tool that provides a set of APIs to integrate SimpliFiCard functionality into your Android applications. SimpliFiCard is a card management service that allows users to perform various card-related actions such as viewing card details, requesting a physical card, activating a card, setting a PIN, and getting a PIN. This documentation will guide you through the available APIs and provide instructions on how to utilize them effectively.
+The SimpliFi SDK provides a set of powerful functionalities for seamless integration into your mobile applications. With SimpliFi, developers can easily implement features related to card management and electronic Know Your Customer (eKYC) verification. This documentation will guide you through the installation process and provide detailed information about the available APIs.
 
 ## Table of Contents
 
