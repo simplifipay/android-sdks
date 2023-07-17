@@ -16,7 +16,7 @@ The SimpliFi SDK provides a set of powerful functionalities for seamless integra
    - [activateCard()](#activatecard)
    - [getPin()](#getpin)
    - [setPin()](#setpin)
-4. [SimpliFiRequest Definition](#SimpliFiRequest-definition)
+4. [SFRequest Definition](#SFRequest-definition)
 5. [SimpliFiEkyc API Reference](#simplifiekyc-sdk)
 6. [Logging](#logging)
 7. [Customizing UI](#customizing-ui)
@@ -39,14 +39,14 @@ To integrate the SimpliFiCard SDK into your Android application, follow these st
 
 Before using the SimpliFiCard SDK, you need to initialize it with the necessary configuration. Perform the following steps to initialize the SDK:
 
-1. Import the SimpliFiCore SDK into your project:
+1. Import the SFCore SDK into your project:
    ```kotlin
-   import com.simplifi.core.SimpliFiCore
+   import com.simplifi.core.SFCore
    ```
 
-2. Initialize the SimpliFiCore SDK by providing the base URL and the application context. This initialization should be performed in your application's `onCreate()` method or at an appropriate initialization point:
+2. Initialize the SFCore SDK by providing the base URL and the application context. This initialization should be performed in your application's `onCreate()` method or at an appropriate initialization point:
    ```kotlin
-   SimpliFiCore.initialize(baseUrl, context)
+   SFCore.initialize(baseUrl, context)
    ```
 
 Replace `baseUrl` with the base URL of the SimpliFiCard API, and `context` with the application context.
@@ -58,13 +58,13 @@ With these steps, the SimpliFiCard SDK is now ready for use in your application.
 ### showDetail()
 
 ```kotlin
-fun showDetail(request: SimpliFiRequest, context: Context)
+SFCard.showDetail(request: SFRequest, context: Context)
 ```
 
 The `showDetail()` method allows you to display the details of a SimpliFiCard.
 
 - Parameters:
-  - `request`: An instance of `SimpliFiRequest` containing the required information to retrieve card details.
+  - `request`: An instance of `SFRequest` containing the required information to retrieve card details.
   - `context`: The `Context` object representing the current application context.
 
 This method presents the `CardDetailsActivity` to the user, showing the details of the requested SimpliFiCard.
@@ -72,13 +72,13 @@ This method presents the `CardDetailsActivity` to the user, showing the details 
 ### requestPhysicalCard()
 
 ```kotlin
-fun requestPhysicalCard(request: SimpliFiRequest, context: Context)
+SFCard.requestPhysicalCard(request: SFRequest, context: Context)
 ```
 
 The `requestPhysicalCard()` method enables you to request a physical SimpliFiCard.
 
 - Parameters:
-  - `request`: An instance of `SimpliFiRequest` containing the required information to request a physical card.
+  - `request`: An instance of `SFRequest` containing the required information to request a physical card.
   - `context`: The `Context` object representing the current application context.
 
 This method presents the `RequestPhysicalCardActivity` to the user, allowing them to request a physical SimpliFiCard.
@@ -86,13 +86,13 @@ This method presents the `RequestPhysicalCardActivity` to the user, allowing the
 ### activateCard()
 
 ```kotlin
-fun activateCard(request: SimpliFiRequest, context: Context)
+SFCard.activateCard(request: SFRequest, context: Context)
 ```
 
 The `activateCard()` method allows you to activate a SimpliFiCard.
 
 - Parameters:
-  - `request`: An instance of `SimpliFiRequest` containing the required information to activate a card.
+  - `request`: An instance of `SFRequest` containing the required information to activate a card.
   - `context`: The `Context` object representing the current application context.
 
 This method presents the `ActivateCardActivity` to the user, guiding them through the card activation process.
@@ -100,13 +100,13 @@ This method presents the `ActivateCardActivity` to the user, guiding them throug
 ### getPin()
 
 ```kotlin
-fun getPin(request: SimpliFiRequest, context: Context)
+SFCard.getPin(request: SFRequest, context: Context)
 ```
 
 The `getPin()` method retrieves the PIN associated with a SimpliFiCard.
 
 - Parameters:
-  - `request`: An instance of `SimpliFiRequest` containing the required information to get the card's PIN.
+  - `request`: An instance of `SFRequest` containing the required information to get the card's PIN.
   - `context`: The `Context` object representing the current application context.
 
 This method presents the `GetPinActivity` to the user, allowing them to view the PIN associated with the SimpliFiCard.
@@ -114,22 +114,22 @@ This method presents the `GetPinActivity` to the user, allowing them to view the
 ### setPin()
 
 ```kotlin
-fun setPin(request: SimpliFiRequest, context: Context)
+SFCard.setPin(request: SFRequest, context: Context)
 ```
 
 The `setPin()` method allows you to set a new PIN for a SimpliFiCard.
 
 - Parameters:
-  - `request`: An instance of `SimpliFiRequest` containing the required information to set a new PIN.
+  - `request`: An instance of `SFRequest` containing the required information to set a new PIN.
   - `context`: The `Context` object representing the current application context.
 
 This method presents the `SetPinActivity` to the user, guiding them through the process of setting a new PIN for the SimpliFiCard.
 
-## SimpliFiRequest Definition
+## SFRequest Definition
 
-The `SimpliFiRequest` data class represents the necessary parameters required by the SimpliFiCard SDK methods.
+The `SFRequest` data class represents the necessary parameters required by the SimpliFiCard SDK methods.
 
-### SimpliFiRequest Properties
+### SFRequest Properties
 
 - `userUuid`: A `String` representing the user's unique identifier.
 - `cardUuid`: A `String` representing the SimpliFiCard's unique identifier.
@@ -151,16 +151,16 @@ The SimpliFiEkyc SDK provides eKYC (Electronic Know Your Customer) capabilities.
 
 2. Import the `SFKyc` class into your project:
    ```kotlin
-   import com.simplifi.ekyc.SimpliFiEKyc
+   import com.simplifi.ekyc.SFEKyc
    ```
 
 3. To start the eKYC journey, use the `start()` method of the `SFKyc` class:
    ```kotlin
-   SimpliFiEKyc.start(request, context, callback)
+   SFEKyc.start(request, context, callback)
    ```
 
    - Parameters:
-     - `request`: An instance of `SimpliFiRequest` containing the required information for eKYC.
+     - `request`: An instance of `SFRequest` containing the required information for eKYC.
      - `context`: The `Context` object representing the current application context.
      - `callback`: An implementation of the `EkycCallback` interface to handle eKYC events and errors.
 
@@ -187,12 +187,12 @@ The SimpliFiCard SDK includes SimpliFiLogger SDK, which logs any network errors 
 
 To enable logging, use:
 ```kotlin
-SimpliFiLogger.enableLogging()
+SFLogger.enableLogging()
 ```
 
 To disable logging, use:
 ```kotlin
-SimpliFiLogger.disableLogging()
+SFLogger.disableLogging()
 ```
 
 By enabling logging, network errors will be logged to Mixpanel for analysis and troubleshooting purposes.
@@ -237,10 +237,10 @@ To customize the screen background color, use the `setScreenBackgroundColor()` m
 
 To customize the text color on the card, use the `setTextColorOnCard()` method, providing a color in hexadecimal format.
 
-After customizing the theme options, you can set them to the SimpliFiCore SDK using the following code:
+After customizing the theme options, you can set them to the SFCore SDK using the following code:
 
 ```kotlin
-SimpliFiCore.theme = themeOptions
+SFCore.theme = themeOptions
 ```
 
 By customizing the theme options, you can align the appearance of the SDK with your application's design and branding.
