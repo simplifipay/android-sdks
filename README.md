@@ -17,9 +17,12 @@ SimpliFiCard SDK is a powerful tool that provides a set of APIs to integrate Sim
    - [getPin()](#getpin)
    - [setPin()](#setpin)
 4. [SFRequest Definition](#sfrequest-definition)
-5. [SimpliFiEkyc API Reference](#simplifiekyc)
+5. [SimpliFiEkyc API Reference](#simplifiekyc-sdk)
 6. [Logging](#logging)
 7. [Customizing UI](#customizing-ui)
+8. [Security Considerations](#security-considerations)
+9. [Release Notes and Versioning](#release-notes-and-versioning)
+10. [Support and Contact Information](#support-and-contact-information)
 
 ## Installation
 
@@ -135,6 +138,8 @@ The `SFRequest` data class represents the necessary parameters required by the S
 
 Make sure to provide the correct values for these properties when making API calls using the SimpliFiCard SDK.
 
+That concludes the documentation for the SimpliFiCard SDK. You are now equipped with the necessary information to integrate SimpliFiCard functionality into your Android application effectively.
+
 ## SimpliFiEkyc SDK
 
 The SimpliFiEkyc SDK provides eKYC (Electronic Know Your Customer) capabilities. To use this SDK, follow the steps below:
@@ -240,4 +245,21 @@ SFCore.theme = themeOptions
 
 By customizing the theme options, you can align the appearance of the SDK with your application's design and branding.
 
-That concludes the documentation for the SimpliFiCard SDK. You are now equipped with the necessary information to integrate SimpliFiCard functionality into your Android application effectively.
+## Security Considerations
+SimpliFi SDKs prioritize security when handling sensitive data, such as card information and user
+
+ verification details. The SDKs implement encryption mechanisms and follow industry best practices to ensure the confidentiality and integrity of the data. However, it is essential to implement additional security measures in your application to protect user data and comply with relevant regulations.
+
+## Release Notes and Versioning
+- SimpliFiCard SDK, version 3.0.0
+  - Show card details.
+  - Request physical card.
+  - Activating card.
+  - Retrieving PIN.
+  - Setting PIN.
+ 
+- SimpliFiEKyc SDK, version 3.0.0
+  - eKYC verification journey.
+
+## Support and Contact Information
+If you need any assistance or have questions regarding SimpliFi SDKs, you can reach out to our support team at support@simplifipay.com.
