@@ -203,44 +203,28 @@ The SimpliFiCard SDK allows you to customize the look and feel of the views disp
 
 ### ThemeOptions
 
-The `ThemeOptions` class provides methods to customize the UI elements used by the SimpliFiCard SDK. You can customize the following elements:
+The `SFTheme` class provides methods to customize the UI elements used by the SimpliFi SDKs. You can customize the following elements. Supported Fonts are defined `SFFont` enum and supported colors are define in `SFColor` enum.
 
-- `headerFont`: Specifies the font for the header text.
-- `bodyFont`: Specifies the font for the body text.
-- `buttonBackgroundColor`: Specifies the background color of buttons.
-- `buttonTextColor`: Specifies the text color of buttons.
-- `screenBackgroundColor`: Specifies the background color of screens.
-- `textColorOnCard`: Specifies the text color on the card.
+- `headerFont`: Specifies the font for the header text. **DEFAULT = SFFont.MONTSERRAT**
+- `bodyFont`: Specifies the font for the body text. **DEFAULT = SFFont.MONTSERRAT**
+- `backgroundColor`: Specifies the background color of views. **DEFAULT = SFColor.WHITE**
+- `buttonBackgroundColor`: Specifies the background color of Buttons. **DEFAULT = SFColor.BLUE**
+- `buttonTextColor`: Specifies the text color on the Buttons. **DEFAULT = SFColor.WHITE**
+- `bodyTextColor`: Specifies the text color of body. **DEFAULT = SFColor.BLACK**
+- `cardTextColor`: Specifies the text color on the card. **DEFAULT = SFColor.WHITE**
+- `headerTextColor`: Specifies the text color of header. **DEFAULT = SFColor.BLACK**
 
-Here's an example of how to use the `ThemeOptions` class:
-
-```kotlin
-val themeOptions = ThemeOptions.Builder()
-    .setHeaderFont(FontFace.Montserrat)
-    .setBodyFont(FontFace.Montserrat)
-    .setButtonBackgroundColor("#FF0000")
-    .setButtonTextColor("#FFFFFF")
-    .setScreenBackgroundColor("#F0F0F0")
-    .setTextColorOnCard("#000000")
-    .build()
-```
-
-You can set the desired font using the `setHeaderFont()` and `setBodyFont()` methods, providing one of the available
-
- `FontFace` options (`Roboto`, `Montserrat`, `F29LTBukra`).
-
-To customize the button background color, use the `setButtonBackgroundColor()` method, providing a color in hexadecimal format.
-
-To customize the button text color, use the `setButtonTextColor()` method, providing a color in hexadecimal format.
-
-To customize the screen background color, use the `setScreenBackgroundColor()` method, providing a color in hexadecimal format.
-
-To customize the text color on the card, use the `setTextColorOnCard()` method, providing a color in hexadecimal format.
-
-After customizing the theme options, you can set them to the SFCore SDK using the following code:
+Here's an example of how to use the `SFTheme` class:
 
 ```kotlin
-SFCore.theme = themeOptions
+SFTheme.headerFont             = SFFont.BUKRA
+SFTheme.body                   = SFFont.BUKRA
+SFTheme.backgroundColor        = SFColor.BLACK
+SFTheme.buttonBackgroundColor  = SFColor.WHITE
+SFTheme.buttonTextColor        = SFColor.BLACK
+SFTheme.bodyTextColor          = SFColor.GRAY
+SFTheme.cardTextColor          = SFColor.WHITE
+SFTheme.headerTextColor        = SFColor.GRAY
 ```
 
 By customizing the theme options, you can align the appearance of the SDK with your application's design and branding.
