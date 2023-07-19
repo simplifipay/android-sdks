@@ -244,4 +244,4 @@ SimpliFi SDKs prioritize security when handling sensitive data, such as card inf
   - eKYC verification journey.
 
 ## Support and Contact Information
-If you need any assistance or have questions regarding SimpliFi SDKs, you can reach out to our support team at support@simplifipay.com.
+If you need any assistance or have questions regarding SimpliFi SDKs, you can reach out to our support team at daud.mujib@simplifipay.com.
