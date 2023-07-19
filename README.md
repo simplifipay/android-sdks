@@ -236,12 +236,19 @@ SimpliFi SDKs prioritize security when handling sensitive data, such as card inf
 - SimpliFiCard SDK, version 4.0.0
   - Show card details.
   - Request physical card.
-  - Activating card.
-  - Retrieving PIN.
-  - Setting PIN.
+  - Activate card.
+  - Retrieve PIN.
+  - Set PIN.
  
 - SimpliFiEKyc SDK, version 4.0.0
   - eKYC verification journey.
+ 
+- SimpliFiLogger SDK, version 3.0.0
+  - Logs network error to Mixpanel
+  - Set custom logger
+
+- SimpliFiTheme SDK, version 3.0.0
+  - Set custom UI theme
 
 ## Support and Contact Information
 If you need any assistance or have questions regarding SimpliFi SDKs, you can reach out to our support team at daud.mujib@simplifipay.com.
