@@ -30,7 +30,7 @@ To integrate the SimpliFiCard SDK into your Android application, follow these st
 
 1. Add the SimpliFiCard SDK dependency to your project's build.gradle file:
    ```
-   implementation 'com.simplifi:card:3.0.0'
+   implementation 'com.simplifi:card:4.0.0'
    ```
 
 2. Sync your project with the updated dependencies.
@@ -146,7 +146,7 @@ The SimpliFiEkyc SDK provides eKYC (Electronic Know Your Customer) capabilities.
 
 1. Add the SimpliFiEkyc SDK dependency to your project's build.gradle file:
    ```
-   implementation 'com.simplifi:ekyc:3.0.0'
+   implementation 'com.simplifi:ekyc:4.0.0'
    ```
 
 2. Import the `SFKyc` class into your project:
@@ -201,8 +201,6 @@ By enabling logging, network errors will be logged to Mixpanel for analysis and 
 
 The SimpliFiCard SDK allows you to customize the look and feel of the views displayed by the SDK. To change UI elements, you can use the `ThemeOptions` class.
 
-### ThemeOptions
-
 The `SFTheme` class provides methods to customize the UI elements used by the SimpliFi SDKs. You can customize the following elements. Supported Fonts are defined `SFFont` enum and supported colors are define in `SFColor` enum.
 
 - `headerFont`: Specifies the font for the header text. **DEFAULT = SFFont.MONTSERRAT**
@@ -235,14 +233,14 @@ SimpliFi SDKs prioritize security when handling sensitive data, such as card inf
  verification details. The SDKs implement encryption mechanisms and follow industry best practices to ensure the confidentiality and integrity of the data. However, it is essential to implement additional security measures in your application to protect user data and comply with relevant regulations.
 
 ## Release Notes and Versioning
-- SimpliFiCard SDK, version 3.0.0
+- SimpliFiCard SDK, version 4.0.0
   - Show card details.
   - Request physical card.
   - Activating card.
   - Retrieving PIN.
   - Setting PIN.
  
-- SimpliFiEKyc SDK, version 3.0.0
+- SimpliFiEKyc SDK, version 4.0.0
   - eKYC verification journey.
 
 ## Support and Contact Information
