@@ -167,36 +167,35 @@ The SimpliFiEkyc SDK provides eKYC (Electronic Know Your Customer) capabilities.
 1. Make sure your module minimum Android SDK is 21 or above
 
 2. Add the following snippit your modules's gradle file
-```gradle
-buildFeatures {
-   ...
-   dataBinding true
-}
-
-defaultConfig {
-   ...
-   multiDexEnabled true
-}
-```
+   ```gradle
+   buildFeatures {
+      ...
+      dataBinding true
+   }
+   
+   defaultConfig {
+      ...
+      multiDexEnabled true
+   }
+   ```
 
 3. Add the following snippit in your app's gradle file under repositories section
-
-```gradle
-repositories {
-   ...
-
-   jcenter()
-
-   maven {
-      url 'http://mobile-sdk.idwise.ai/releases/'
-      allowInsecureProtocol = true
+   ```gradle
+   repositories {
+      ...
+   
+      jcenter()
+   
+      maven {
+         url 'http://mobile-sdk.idwise.ai/releases/'
+         allowInsecureProtocol = true
+      }
+   
+      maven {
+         url 'https://jitpack.io'
+      }
    }
-
-   maven {
-      url 'https://jitpack.io'
-   }
-}
-```
+   ```
  
 4. Add the SimpliFiEkyc SDK dependency to your modules's build.gradle file:
    ```gradle
