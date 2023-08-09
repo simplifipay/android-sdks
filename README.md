@@ -48,7 +48,16 @@ To integrate the SimpliFiCard SDK into your Android application, follow these st
 
 2. Add the SimpliFiCard SDK dependency to your modules's build.gradle file:
    ```gradle
-   implementation 'com.simplifi:card:4.0.4'
+
+   buildFeatures {
+      ...
+      dataBinding true
+   }
+
+   dependencies {
+      ...
+      implementation 'com.simplifi:card:4.0.4'
+   }
    ```
 
 3. Sync your project with the updated dependencies.
@@ -166,20 +175,7 @@ The SimpliFiEkyc SDK provides eKYC (Electronic Know Your Customer) capabilities.
 
 1. Make sure your module minimum Android SDK is 21 or above
 
-2. Add the following snippit your modules's gradle file
-   ```gradle
-   buildFeatures {
-      ...
-      dataBinding true
-   }
-   
-   defaultConfig {
-      ...
-      multiDexEnabled true
-   }
-   ```
-
-3. Add the following snippit in your app's gradle file under repositories section
+2. Add the following snippit in your app's gradle file under repositories section
    ```gradle
    repositories {
       ...
@@ -197,17 +193,20 @@ The SimpliFiEkyc SDK provides eKYC (Electronic Know Your Customer) capabilities.
    }
    ```
  
-4. Add the SimpliFiEkyc SDK dependency to your modules's build.gradle file:
+3. Add the SimpliFiEkyc SDK dependency to your modules's build.gradle file:
    ```gradle
-   implementation 'com.simplifi:ekyc:4.0.3'
+   dependencies {
+      ...
+      implementation 'com.simplifi:ekyc:4.0.3'
+   }
    ```
 
-5. Import the `SFKyc` class into your project:
+4. Import the `SFKyc` class into your project:
    ```kotlin
    import com.simplifi.ekyc.SFEKyc
    ```
 
-6. To start the eKYC journey, use the `start()` method of the `SFKyc` class:
+5. To start the eKYC journey, use the `start()` method of the `SFKyc` class:
    ```kotlin
    SFEKyc.start(request, context, callback)
    ```
@@ -217,7 +216,7 @@ The SimpliFiEkyc SDK provides eKYC (Electronic Know Your Customer) capabilities.
      - `context`: The `Context` object representing the current application context.
      - `callback`: An implementation of the `EkycCallback` interface to handle eKYC events and errors.
 
-7. Implement the `EkycCallback` interface to handle the eKYC events and errors:
+6. Implement the `EkycCallback` interface to handle the eKYC events and errors:
    ```kotlin
    interface EkycCallback {
        fun onJourneyStarted(journeyId: String)
