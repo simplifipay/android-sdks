@@ -26,12 +26,28 @@ The SimpliFi SDK provides a set of powerful functionalities for seamless integra
 
 ## Installation
 
+Add the following snippit in your app's gradle file under repositories section
+
+```gradle
+repositories {
+   ...
+
+   maven {
+      url "https://maven.pkg.github.com/simplifipay/android-sdks"
+      credentials {
+         username = "daudmujib"
+         password = "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"
+      }
+   }
+}
+```
+
 To integrate the SimpliFiCard SDK into your Android application, follow these steps:
 
 1. Make sure your module minimum Android SDK is 21 or above
 
-2. Add the SimpliFiCard SDK dependency to your project's build.gradle file:
-   ```
+2. Add the SimpliFiCard SDK dependency to your modules's build.gradle file:
+   ```gradle
    implementation 'com.simplifi:card:4.0.4'
    ```
 
@@ -149,18 +165,50 @@ That concludes the documentation for the SimpliFiCard SDK. You are now equipped 
 The SimpliFiEkyc SDK provides eKYC (Electronic Know Your Customer) capabilities. To use this SDK, follow the steps below:
 
 1. Make sure your module minimum Android SDK is 21 or above
+
+2. Add the following snippit your modules's gradle file
+```
+buildFeatures {
+   ...
+   dataBinding true
+}
+
+defaultConfig {
+   ...
+   multiDexEnabled true
+}
+```
+
+3. Add the following snippit in your app's gradle file under repositories section
+
+```gradle
+repositories {
+   ...
+
+   jcenter()
+
+   maven {
+      url 'http://mobile-sdk.idwise.ai/releases/'
+      allowInsecureProtocol = true
+   }
+
+   maven {
+      url 'https://jitpack.io'
+   }
+}
+```
  
-2. Add the SimpliFiEkyc SDK dependency to your project's build.gradle file:
+4. Add the SimpliFiEkyc SDK dependency to your modules's build.gradle file:
    ```
    implementation 'com.simplifi:ekyc:4.0.3'
    ```
 
-3. Import the `SFKyc` class into your project:
+5. Import the `SFKyc` class into your project:
    ```kotlin
    import com.simplifi.ekyc.SFEKyc
    ```
 
-4. To start the eKYC journey, use the `start()` method of the `SFKyc` class:
+6. To start the eKYC journey, use the `start()` method of the `SFKyc` class:
    ```kotlin
    SFEKyc.start(request, context, callback)
    ```
@@ -170,7 +218,7 @@ The SimpliFiEkyc SDK provides eKYC (Electronic Know Your Customer) capabilities.
      - `context`: The `Context` object representing the current application context.
      - `callback`: An implementation of the `EkycCallback` interface to handle eKYC events and errors.
 
-5. Implement the `EkycCallback` interface to handle the eKYC events and errors:
+7. Implement the `EkycCallback` interface to handle the eKYC events and errors:
    ```kotlin
    interface EkycCallback {
        fun onJourneyStarted(journeyId: String)
