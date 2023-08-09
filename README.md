@@ -28,12 +28,16 @@ The SimpliFi SDK provides a set of powerful functionalities for seamless integra
 
 To integrate the SimpliFiCard SDK into your Android application, follow these steps:
 
-1. Add the SimpliFiCard SDK dependency to your project's build.gradle file:
+1. Make sure your module minimum Android SDK is 21 or above
+
+2. Add the SimpliFiCard SDK dependency to your project's build.gradle file:
    ```
-   implementation 'com.simplifi:card:4.0.1'
+   implementation 'com.simplifi:card:4.0.4'
    ```
 
-2. Sync your project with the updated dependencies.
+3. Sync your project with the updated dependencies.
+
+***NOTE: com.simplifi:card:4.0.4 will only work on Android SDK version 21 and above***
 
 ## Initialization
 
@@ -144,17 +148,19 @@ That concludes the documentation for the SimpliFiCard SDK. You are now equipped 
 
 The SimpliFiEkyc SDK provides eKYC (Electronic Know Your Customer) capabilities. To use this SDK, follow the steps below:
 
-1. Add the SimpliFiEkyc SDK dependency to your project's build.gradle file:
+1. Make sure your module minimum Android SDK is 21 or above
+ 
+2. Add the SimpliFiEkyc SDK dependency to your project's build.gradle file:
    ```
    implementation 'com.simplifi:ekyc:4.0.3'
    ```
 
-2. Import the `SFKyc` class into your project:
+3. Import the `SFKyc` class into your project:
    ```kotlin
    import com.simplifi.ekyc.SFEKyc
    ```
 
-3. To start the eKYC journey, use the `start()` method of the `SFKyc` class:
+4. To start the eKYC journey, use the `start()` method of the `SFKyc` class:
    ```kotlin
    SFEKyc.start(request, context, callback)
    ```
@@ -164,7 +170,7 @@ The SimpliFiEkyc SDK provides eKYC (Electronic Know Your Customer) capabilities.
      - `context`: The `Context` object representing the current application context.
      - `callback`: An implementation of the `EkycCallback` interface to handle eKYC events and errors.
 
-4. Implement the `EkycCallback` interface to handle the eKYC events and errors:
+5. Implement the `EkycCallback` interface to handle the eKYC events and errors:
    ```kotlin
    interface EkycCallback {
        fun onJourneyStarted(journeyId: String)
@@ -180,6 +186,8 @@ The SimpliFiEkyc SDK provides eKYC (Electronic Know Your Customer) capabilities.
    - The `onJourneyCancelled()` method is called when the eKYC journey is cancelled, providing the journey ID (nullable).
    - The `onJourneyCompleted()` method is called when the eKYC journey is completed, providing the journey ID and a boolean flag indicating whether the journey was successful.
    - The `onError()` method is called when an error occurs during the eKYC journey, providing the `EkycError` object.
+  
+***NOTE: com.simplifi:ekyc:4.0.4 will only work on Android SDK version 21 and above***
 
 ## Logging
 
@@ -233,6 +241,9 @@ SimpliFi SDKs prioritize security when handling sensitive data, such as card inf
  verification details. The SDKs implement encryption mechanisms and follow industry best practices to ensure the confidentiality and integrity of the data. However, it is essential to implement additional security measures in your application to protect user data and comply with relevant regulations.
 
 ## Release Notes and Versioning
+- SimpliFiCard SDK, version 4.0.4
+  - Minimum Android SDK version is set to 21.
+    
 - SimpliFiCard SDK, version 4.0.1
   - Minor fixes.
     
@@ -243,15 +254,24 @@ SimpliFi SDKs prioritize security when handling sensitive data, such as card inf
   - Retrieve PIN.
   - Set PIN.
 
+- SimpliFiEKyc SDK, version 4.0.4
+  - Minimum Android SDK version is set to 21.
+
 - SimpliFiEKyc SDK, version 4.0.3
   - Minor fixes.
  
 - SimpliFiEKyc SDK, version 4.0.0
   - eKYC verification journey.
 
+- SimpliFiLogger SDK, version 3.0.1
+  - Minimum Android SDK version is set to 21.
+
 - SimpliFiLogger SDK, version 3.0.0
   - Logs network error to Mixpanel
   - Set custom logger
+
+- SimpliFiTheme SDK, version 3.0.1
+  - Minimum Android SDK version is set to 21.
 
 - SimpliFiTheme SDK, version 3.0.0
   - Set custom UI theme
