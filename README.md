@@ -167,7 +167,7 @@ The SimpliFiEkyc SDK provides eKYC (Electronic Know Your Customer) capabilities.
 1. Make sure your module minimum Android SDK is 21 or above
 
 2. Add the following snippit your modules's gradle file
-```
+```gradle
 buildFeatures {
    ...
    dataBinding true
@@ -199,7 +199,7 @@ repositories {
 ```
  
 4. Add the SimpliFiEkyc SDK dependency to your modules's build.gradle file:
-   ```
+   ```gradle
    implementation 'com.simplifi:ekyc:4.0.3'
    ```
 
