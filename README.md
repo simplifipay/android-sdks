@@ -44,7 +44,7 @@ repositories {
 
 To integrate the SimpliFiCard SDK into your Android application, follow these steps:
 
-1. Make sure your module minimum Android SDK is 21 or above
+1. Make sure your module minimum Android SDK is 24 or above
 
 2. Add the SimpliFiCard SDK dependency to your modules's build.gradle file:
    ```gradle
@@ -62,7 +62,7 @@ To integrate the SimpliFiCard SDK into your Android application, follow these st
 
 3. Sync your project with the updated dependencies.
 
-***NOTE: com.simplifi:card:4.0.4 will only work on Android SDK version 21 and above***
+***NOTE: com.simplifi:card:4.0.4 will only work on Android SDK version 24 and above***
 
 ## Initialization
 
@@ -173,7 +173,7 @@ That concludes the documentation for the SimpliFiCard SDK. You are now equipped 
 
 The SimpliFiEkyc SDK provides eKYC (Electronic Know Your Customer) capabilities. To use this SDK, follow the steps below:
 
-1. Make sure your module minimum Android SDK is 21 or above
+1. Make sure your module minimum Android SDK is 24 or above
 
 2. Add the following snippit in your app's gradle file under repositories section
    ```gradle
@@ -233,7 +233,7 @@ The SimpliFiEkyc SDK provides eKYC (Electronic Know Your Customer) capabilities.
    - The `onJourneyCompleted()` method is called when the eKYC journey is completed, providing the journey ID and a boolean flag indicating whether the journey was successful.
    - The `onError()` method is called when an error occurs during the eKYC journey, providing the `EkycError` object.
   
-***NOTE: com.simplifi:ekyc:4.0.4 will only work on Android SDK version 21 and above***
+***NOTE: com.simplifi:ekyc:4.0.4 will only work on Android SDK version 24 and above***
 
 ## Logging
 
@@ -288,7 +288,7 @@ SimpliFi SDKs prioritize security when handling sensitive data, such as card inf
 
 ## Release Notes and Versioning
 - SimpliFiCard SDK, version 4.0.4
-  - Minimum Android SDK version is set to 21.
+  - Minimum Android SDK version is set to 24.
     
 - SimpliFiCard SDK, version 4.0.1
   - Minor fixes.
@@ -301,7 +301,7 @@ SimpliFi SDKs prioritize security when handling sensitive data, such as card inf
   - Set PIN.
 
 - SimpliFiEKyc SDK, version 4.0.4
-  - Minimum Android SDK version is set to 21.
+  - Minimum Android SDK version is set to 24.
 
 - SimpliFiEKyc SDK, version 4.0.3
   - Minor fixes.
@@ -310,14 +310,14 @@ SimpliFi SDKs prioritize security when handling sensitive data, such as card inf
   - eKYC verification journey.
 
 - SimpliFiLogger SDK, version 3.0.1
-  - Minimum Android SDK version is set to 21.
+  - Minimum Android SDK version is set to 24.
 
 - SimpliFiLogger SDK, version 3.0.0
   - Logs network error to Mixpanel
   - Set custom logger
 
 - SimpliFiTheme SDK, version 3.0.1
-  - Minimum Android SDK version is set to 21.
+  - Minimum Android SDK version is set to 24.
 
 - SimpliFiTheme SDK, version 3.0.0
   - Set custom UI theme
