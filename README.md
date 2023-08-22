@@ -287,8 +287,11 @@ SimpliFi SDKs prioritize security when handling sensitive data, such as card inf
  verification details. The SDKs implement encryption mechanisms and follow industry best practices to ensure the confidentiality and integrity of the data. However, it is essential to implement additional security measures in your application to protect user data and comply with relevant regulations.
 
 ## Release Notes and Versioning
-- SimpliFiCard SDK, version 4.0.4
+- SimpliFiCard SDK, version 4.0.5
   - Minimum Android SDK version is set to 24.
+
+- SimpliFiCard SDK, version 4.0.4
+  - Minimum Android SDK version is set to 21.
     
 - SimpliFiCard SDK, version 4.0.1
   - Minor fixes.
@@ -300,8 +303,11 @@ SimpliFi SDKs prioritize security when handling sensitive data, such as card inf
   - Retrieve PIN.
   - Set PIN.
 
-- SimpliFiEKyc SDK, version 4.0.4
+- SimpliFiEKyc SDK, version 4.0.5
   - Minimum Android SDK version is set to 24.
+
+- SimpliFiEKyc SDK, version 4.0.4
+  - Minimum Android SDK version is set to 21.
 
 - SimpliFiEKyc SDK, version 4.0.3
   - Minor fixes.
@@ -309,17 +315,23 @@ SimpliFi SDKs prioritize security when handling sensitive data, such as card inf
 - SimpliFiEKyc SDK, version 4.0.0
   - eKYC verification journey.
 
-- SimpliFiLogger SDK, version 3.0.1
+- SimpliFiLogger SDK, version 3.0.2
   - Minimum Android SDK version is set to 24.
+
+- SimpliFiLogger SDK, version 3.0.1
+  - Minimum Android SDK version is set to 21.
 
 - SimpliFiLogger SDK, version 3.0.0
   - Logs network error to Mixpanel
   - Set custom logger
 
-- SimpliFiTheme SDK, version 3.0.1
+- SimpliFiUI SDK, version 3.0.2
   - Minimum Android SDK version is set to 24.
 
-- SimpliFiTheme SDK, version 3.0.0
+- SimpliFiUI SDK, version 3.0.1
+  - Minimum Android SDK version is set to 21.
+
+- SimpliFiUI SDK, version 3.0.0
   - Set custom UI theme
 
 ## Support and Contact Information
