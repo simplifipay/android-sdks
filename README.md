@@ -36,7 +36,7 @@ repositories {
       url "https://maven.pkg.github.com/simplifipay/android-sdks"
       credentials {
          username = "daudmujib"
-         password = "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"
+         password = "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"
       }
    }
 }
@@ -56,13 +56,13 @@ To integrate the SimpliFiCard SDK into your Android application, follow these st
 
    dependencies {
       ...
-      implementation 'com.simplifi:card:4.0.4'
+      implementation 'com.simplifi:card:4.0.5'
    }
    ```
 
 3. Sync your project with the updated dependencies.
 
-***NOTE: com.simplifi:card:4.0.4 will only work on Android SDK version 24 and above***
+***NOTE: com.simplifi:card:4.0.5 will only work on Android SDK version 24 and above***
 
 ## Initialization
 
@@ -197,7 +197,7 @@ The SimpliFiEkyc SDK provides eKYC (Electronic Know Your Customer) capabilities.
    ```gradle
    dependencies {
       ...
-      implementation 'com.simplifi:ekyc:4.0.3'
+      implementation 'com.simplifi:ekyc:4.0.5'
    }
    ```
 
@@ -233,7 +233,7 @@ The SimpliFiEkyc SDK provides eKYC (Electronic Know Your Customer) capabilities.
    - The `onJourneyCompleted()` method is called when the eKYC journey is completed, providing the journey ID and a boolean flag indicating whether the journey was successful.
    - The `onError()` method is called when an error occurs during the eKYC journey, providing the `EkycError` object.
   
-***NOTE: com.simplifi:ekyc:4.0.4 will only work on Android SDK version 24 and above***
+***NOTE: com.simplifi:ekyc:4.0.5 will only work on Android SDK version 24 and above***
 
 ## Logging
 
