@@ -36,7 +36,7 @@ repositories {
       url "https://maven.pkg.github.com/simplifipay/android-sdks"
       credentials {
          username = "daudmujib"
-         password = "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"
+         password = "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"
       }
    }
 }
@@ -239,6 +239,11 @@ The SimpliFiEkyc SDK provides eKYC (Electronic Know Your Customer) capabilities.
 
 The SimpliFiCard SDK includes SimpliFiLogger SDK, which logs any network errors to Mixpanel. By default, logging is enabled. You can enable or disable logging using the following methods:
 
+Import Logger
+```kotlin
+import com.simplifi.logger.SFLogger
+```
+
 To enable logging, use:
 ```kotlin
 SFLogger.enableLogging()
@@ -250,6 +255,22 @@ SFLogger.disableLogging()
 ```
 
 By enabling logging, network errors will be logged to Mixpanel for analysis and troubleshooting purposes.
+
+### Custom Logger
+
+You can set you own logger instead. To set custom logger implement `SFLoggable` protocol. And use it as:
+
+```kotlin
+import com.simplifi.logger.SFLogger
+
+class MyLogger: SFLoggable {
+  // implement methods
+}
+
+SFLogger.setCustomLogger(MyLogger())
+```
+
+Now all the logs will be redirected to your custom logger instead of default logger.
 
 ## Customizing UI
 
@@ -282,9 +303,7 @@ SFTheme.headerTextColor        = SFColor.GRAY
 By customizing the theme options, you can align the appearance of the SDK with your application's design and branding.
 
 ## Security Considerations
-SimpliFi SDKs prioritize security when handling sensitive data, such as card information and user
-
- verification details. The SDKs implement encryption mechanisms and follow industry best practices to ensure the confidentiality and integrity of the data. However, it is essential to implement additional security measures in your application to protect user data and comply with relevant regulations.
+SimpliFi SDKs prioritize security when handling sensitive data, such as card information and user verification details. The SDKs implement encryption mechanisms and follow industry best practices to ensure the confidentiality and integrity of the data. However, it is essential to implement additional security measures in your application to protect user data and comply with relevant regulations.
 
 ## Release Notes and Versioning
 - SimpliFiCard SDK, version 4.0.5
