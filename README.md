@@ -36,7 +36,7 @@ repositories {
       url "https://maven.pkg.github.com/simplifipay/android-sdks"
       credentials {
          username = "daudmujib"
-         password = "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"
+         password = "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"
       }
    }
 }
@@ -56,13 +56,13 @@ To integrate the SimpliFiCard SDK into your Android application, follow these st
 
    dependencies {
       ...
-      implementation 'com.simplifi:card:4.0.5'
+      implementation 'com.simplifi:card:4.0.6'
    }
    ```
 
 3. Sync your project with the updated dependencies.
 
-***NOTE: com.simplifi:card:4.0.5 will only work on Android SDK version 24 and above***
+***NOTE: com.simplifi:card:4.0.6 will only work on Android SDK version 24 and above***
 
 ## Initialization
 
@@ -197,7 +197,7 @@ The SimpliFiEkyc SDK provides eKYC (Electronic Know Your Customer) capabilities.
    ```gradle
    dependencies {
       ...
-      implementation 'com.simplifi:ekyc:4.0.5'
+      implementation 'com.simplifi:ekyc:4.0.6'
    }
    ```
 
@@ -233,7 +233,7 @@ The SimpliFiEkyc SDK provides eKYC (Electronic Know Your Customer) capabilities.
    - The `onJourneyCompleted()` method is called when the eKYC journey is completed, providing the journey ID and a boolean flag indicating whether the journey was successful.
    - The `onError()` method is called when an error occurs during the eKYC journey, providing the `EkycError` object.
   
-***NOTE: com.simplifi:ekyc:4.0.5 will only work on Android SDK version 24 and above***
+***NOTE: com.simplifi:ekyc:4.0.6 will only work on Android SDK version 24 and above***
 
 ## Logging
 
@@ -306,6 +306,9 @@ By customizing the theme options, you can align the appearance of the SDK with y
 SimpliFi SDKs prioritize security when handling sensitive data, such as card information and user verification details. The SDKs implement encryption mechanisms and follow industry best practices to ensure the confidentiality and integrity of the data. However, it is essential to implement additional security measures in your application to protect user data and comply with relevant regulations.
 
 ## Release Notes and Versioning
+- SimpliFiCard SDK, version 4.0.6
+  - General improvements
+    
 - SimpliFiCard SDK, version 4.0.5
   - Minimum Android SDK version is set to 24.
 
@@ -322,6 +325,11 @@ SimpliFi SDKs prioritize security when handling sensitive data, such as card inf
   - Retrieve PIN.
   - Set PIN.
 
+
+
+- SimpliFiEKyc SDK, version 4.0.6
+  - General improvements.
+    
 - SimpliFiEKyc SDK, version 4.0.5
   - Minimum Android SDK version is set to 24.
 
@@ -334,6 +342,11 @@ SimpliFi SDKs prioritize security when handling sensitive data, such as card inf
 - SimpliFiEKyc SDK, version 4.0.0
   - eKYC verification journey.
 
+
+
+- SimpliFiLogger SDK, version 3.0.4
+  - General improvements.
+
 - SimpliFiLogger SDK, version 3.0.2
   - Minimum Android SDK version is set to 24.
 
@@ -343,6 +356,11 @@ SimpliFi SDKs prioritize security when handling sensitive data, such as card inf
 - SimpliFiLogger SDK, version 3.0.0
   - Logs network error to Mixpanel
   - Set custom logger
+
+
+
+- SimpliFiUI SDK, version 3.0.5
+  - General improvements.
 
 - SimpliFiUI SDK, version 3.0.2
   - Minimum Android SDK version is set to 24.
