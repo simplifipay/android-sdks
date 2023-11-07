@@ -56,13 +56,13 @@ To integrate the SimpliFiCard SDK into your Android application, follow these st
 
    dependencies {
       ...
-      implementation 'com.simplifi:card:4.0.6'
+      implementation 'com.simplifi:card:4.0.14'
    }
    ```
 
 3. Sync your project with the updated dependencies.
 
-***NOTE: com.simplifi:card:4.0.6 will only work on Android SDK version 24 and above***
+***NOTE: com.simplifi:card:4.0.14 will only work on Android SDK version 24 and above***
 
 ## Initialization
 
@@ -197,7 +197,7 @@ The SimpliFiEkyc SDK provides eKYC (Electronic Know Your Customer) capabilities.
    ```gradle
    dependencies {
       ...
-      implementation 'com.simplifi:ekyc:4.0.6'
+      implementation 'com.simplifi:ekyc:4.0.23'
    }
    ```
 
@@ -233,7 +233,7 @@ The SimpliFiEkyc SDK provides eKYC (Electronic Know Your Customer) capabilities.
    - The `onJourneyCompleted()` method is called when the eKYC journey is completed, providing the journey ID and a boolean flag indicating whether the journey was successful.
    - The `onError()` method is called when an error occurs during the eKYC journey, providing the `EkycError` object.
   
-***NOTE: com.simplifi:ekyc:4.0.6 will only work on Android SDK version 24 and above***
+***NOTE: com.simplifi:ekyc:4.0.23 will only work on Android SDK version 24 and above***
 
 ## Logging
 
@@ -306,6 +306,9 @@ By customizing the theme options, you can align the appearance of the SDK with y
 SimpliFi SDKs prioritize security when handling sensitive data, such as card information and user verification details. The SDKs implement encryption mechanisms and follow industry best practices to ensure the confidentiality and integrity of the data. However, it is essential to implement additional security measures in your application to protect user data and comply with relevant regulations.
 
 ## Release Notes and Versioning
+- SimpliFiCard SDK, version 4.0.14
+  - General improvements
+
 - SimpliFiCard SDK, version 4.0.6
   - General improvements
     
@@ -326,6 +329,9 @@ SimpliFi SDKs prioritize security when handling sensitive data, such as card inf
   - Set PIN.
 
 
+
+- SimpliFiEKyc SDK, version 4.0.23
+  - General improvements.
 
 - SimpliFiEKyc SDK, version 4.0.6
   - General improvements.
