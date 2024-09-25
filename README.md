@@ -35,8 +35,8 @@ repositories {
    maven {
       url "https://maven.pkg.github.com/simplifipay/android-sdks"
       credentials {
-         username = "daudmujib"
-         password = "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"
+         username = "daudmujib-simplifi"
+         password = "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"
       }
    }
 }
