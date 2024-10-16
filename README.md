@@ -35,7 +35,7 @@ repositories {
    maven {
       url "https://maven.pkg.github.com/simplifipay/android-sdks"
       credentials {
-         username = "daudmujib-simplifi"
+         username = "ASK_FROM_SIMPLIFI_TEAM"
          password = "ASK_FROM_SIMPLIFI_TEAM"
       }
    }
@@ -56,13 +56,13 @@ To integrate the SimpliFiCard SDK into your Android application, follow these st
 
    dependencies {
       ...
-      implementation 'com.simplifi:card:4.3.2'
+      implementation 'com.simplifi:card:5.0.0'
    }
    ```
 
 3. Sync your project with the updated dependencies.
 
-***NOTE: com.simplifi:card:4.3.2 will only work on Android SDK version 24 and above***
+***NOTE: com.simplifi:card:5.0.0 will only work on Android SDK version 24 and above***
 
 ## Initialization
 
@@ -197,7 +197,7 @@ The SimpliFiEkyc SDK provides eKYC (Electronic Know Your Customer) capabilities.
    ```gradle
    dependencies {
       ...
-      implementation 'com.simplifi:ekyc:4.3.2'
+      implementation 'com.simplifi:ekyc:5.0.0'
    }
    ```
 
@@ -233,7 +233,7 @@ The SimpliFiEkyc SDK provides eKYC (Electronic Know Your Customer) capabilities.
    - The `onJourneyCompleted()` method is called when the eKYC journey is completed, providing the journey ID and a boolean flag indicating whether the journey was successful.
    - The `onError()` method is called when an error occurs during the eKYC journey, providing the `EkycError` object.
   
-***NOTE: com.simplifi:ekyc:4.3.2 will only work on Android SDK version 24 and above***
+***NOTE: com.simplifi:ekyc:5.0.0 will only work on Android SDK version 24 and above***
 
 ## Error Handling
 
@@ -317,6 +317,11 @@ By customizing the theme options, you can align the appearance of the SDK with y
 SimpliFi SDKs prioritize security when handling sensitive data, such as card information and user verification details. The SDKs implement encryption mechanisms and follow industry best practices to ensure the confidentiality and integrity of the data. However, it is essential to implement additional security measures in your application to protect user data and comply with relevant regulations.
 
 ## Release Notes and Versioning
+- SimpliFiCard SDK, version 5.0.0
+  - Added support for multilingual. SDK language will remains same as application's language. Supported lanugages are as follows:
+    - English (default)
+    - Arabic
+
 - SimpliFiCard SDK, version 4.3.2
   - General improvements
   - Added a error callback that will be invoked if the accesstoken passed is invalid.
@@ -344,6 +349,11 @@ SimpliFi SDKs prioritize security when handling sensitive data, such as card inf
   - Set PIN.
 
 
+
+- SimpliFiEkyc SDK, version 5.0.0
+  - Added support for multilingual. SDK language will remains same as application's language. Supported lanugages are as follows:
+    - English (default)
+    - Arabic
 
 - SimpliFiEKyc SDK, version 4.3.2
   - General improvements.
