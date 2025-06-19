@@ -32,6 +32,7 @@ Add the following snippit in your app's gradle file under repositories section
 repositories {
    ...
 
+   maven { url 'https://jitpack.io' }
    maven {
       url "https://maven.pkg.github.com/simplifipay/android-sdks"
       credentials {
