@@ -32,7 +32,9 @@ Add the following snippit in your app's gradle file under repositories section
 repositories {
    ...
 
-   maven { url 'https://jitpack.io' }
+   maven {
+      url 'https://jitpack.io'
+   }
    maven {
       url "https://maven.pkg.github.com/simplifipay/android-sdks"
       credentials {
@@ -186,10 +188,6 @@ The SimpliFiEkyc SDK provides eKYC (Electronic Know Your Customer) capabilities.
       maven {
          url 'http://mobile-sdk.idwise.ai/releases/'
          allowInsecureProtocol = true
-      }
-   
-      maven {
-         url 'https://jitpack.io'
       }
    }
    ```
