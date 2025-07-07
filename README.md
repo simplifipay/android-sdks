@@ -316,6 +316,9 @@ By customizing the theme options, you can align the appearance of the SDK with y
 SimpliFi SDKs prioritize security when handling sensitive data, such as card information and user verification details. The SDKs implement encryption mechanisms and follow industry best practices to ensure the confidentiality and integrity of the data. However, it is essential to implement additional security measures in your application to protect user data and comply with relevant regulations.
 
 ## Release Notes and Versioning
+- SimpliFiCard SDK, version 5.0.1
+  - Update Card UI
+      
 - SimpliFiCard SDK, version 5.0.0
   - Added support for multilingual. SDK language will remains same as application's language. Supported lanugages are as follows:
     - English (default)
